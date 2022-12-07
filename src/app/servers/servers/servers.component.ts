@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Servers } from 'src/app/interfaces/servers.interface';
+import { HistoryServersService } from '../services/history-servers.service';
 
 @Component({
   selector: 'app-servers',
@@ -6,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private serviceServers :HistoryServersService) { 
+    this.servers()
+  }
 
   ngOnInit(): void {
+  }
+  server: Servers[]=[
+    
+  ]
+
+  servers(){
+    this.server = this.serviceServers.allServers()
   }
 
 }

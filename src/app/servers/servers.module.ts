@@ -10,6 +10,7 @@ import { ServersComponent } from './servers/servers.component';
   ],
   imports: [
     CommonModule
+    
   ]
 })
 export class ServersModule { }
