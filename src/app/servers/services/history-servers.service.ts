@@ -1,16 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Servers } from '../../interfaces/servers.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HistoryServersService {
-
-  constructor() {
-
-   }
-   
-   servers: Servers[] = [
+  servers = [
     {
     id: 1,
     name: 'Productionserver',
@@ -27,8 +21,11 @@ export class HistoryServersService {
     status: 'offline'
     }
     ]
+  constructor() {
+
+   }
+   
+  
     
-    allServers():Servers[]{
-      return [...this.servers];
-    }
+    
 }

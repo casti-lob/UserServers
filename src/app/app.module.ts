@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { UsersModule } from './users/users.module';
 import { ServersModule } from './servers/servers.module';
-import { RouterLink } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +21,8 @@ import { RouterLink } from '@angular/router';
    SharedModule,
     UsersModule,
     ServersModule,
-    HammerModule,
-    RouterLink
+    HttpClientModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
