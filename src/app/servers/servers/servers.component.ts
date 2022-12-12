@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HistoryServersService } from '../services/history-servers.service';
 
 @Component({
@@ -7,7 +8,10 @@ import { HistoryServersService } from '../services/history-servers.service';
 })
 export class ServersComponent implements OnInit {
 
-  constructor(private serviceServers :HistoryServersService) { 
+  constructor(private serviceServers :HistoryServersService,
+    private router: Router,
+    private route: ActivatedRoute
+    ) { 
     
   }
 
@@ -18,5 +22,9 @@ export class ServersComponent implements OnInit {
   get servers(){
     return this.serviceServers.servers;
   }
-
+  onReload() {
+    // para romper el enlace
+    //this.router.navigate(['servers'], { relativeTo: this.route });
+    this.router.navigate(['servers'])
+    }
 }
