@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServersComponent } from './servers/servers.component';
 import { EditServerComponent } from './edit-server/edit-server.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,7 +12,8 @@ import { EditServerComponent } from './edit-server/edit-server.component';
     EditServerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
     
   ],
   exports: [
